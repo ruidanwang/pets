@@ -10,7 +10,8 @@ layout: default
   async function loaded(reader) {
     const app = await Client.connect("https://2eafdce1bdbffbfac9.gradio.live/");
     const result = await app.predict("/predict", [      
-            reader.result
+            reader.result，
+             mode: 'cors'
         ]);
     
     const label = result;
