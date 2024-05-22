@@ -6,8 +6,9 @@ layout: default
 <input id="photo" type="file">
 <div id="results"></div>
 <script>
-  import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.19.4/dist/index.min.js";
+  
   async function loaded(reader) {
+    import { Client } from "https://cdn.jsdelivr.net/npm/@gradio/client@0.19.4/dist/index.min.js";
     const app = await Client.connect("https://2eafdce1bdbffbfac9.gradio.live/");
     const result = await app.predict("/predict", [      
             reader.result，
